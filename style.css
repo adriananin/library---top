@@ -1,0 +1,64 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;700;900&display=swap");
+
+body {
+  /* background: url(img/bg.svg) no-repeat center center fixed;
+  background-size: cover; */
+  background-color: #dcccbb;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.header {
+  background-color: #a7754d;
+  display: flex;
+  align-items: center;
+  padding-left: 2em;
+}
+
+.bookinfo--container {
+  display: flex;
+  justify-content: center;
+}
+
+.bookinfo {
+  border: 2px solid #646e78;
+  margin-top: 25px;
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  gap: 50px;
+  min-height: 40px;
+  padding: 10px 10px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* width: 40%; */
+}
+
+.card--wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card--container {
+  /* flex: 1; */
+  border: 2px solid blue;
+  margin-top: 25px;
+  display: grid;
+  justify-content: center;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 60%;
+
+  gap: 20px;
+}
+
+.card {
+  /* width: 100px; */
+  height: 200px;
+  border-radius: 7px;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid red;
+  background-color: #eab464;
+}
