@@ -6,88 +6,164 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+main {
+  gap: 10px;
+}
+
 .header {
-  background-color: #a7754d;
+  background-color: #eab464;
   display: flex;
   align-items: center;
   padding-left: 2em;
+  color: #fff;
 }
 
-.bookinfo--container {
-  display: flex;
-  justify-content: center;
-}
-
-.bookinfo {
-  border: 2px solid #646e78;
-  margin-top: 25px;
-  /* display: flex;
-  justify-content: center; */
-  align-items: center;
-  gap: 50px;
-  min-height: 40px;
-  padding: 10px 10px;
-  border-radius: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* width: 40%; */
+svg {
+  fill: white;
 }
 
 .card--wrapper {
+  margin-top: 60px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .card--container {
-  /* flex: 1; */
-  border: 2px solid blue;
-  margin-top: 25px;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   width: 60%;
-
   gap: 20px;
+  color: #a7754d;
+}
+
+.addbookcard {
+  height: 60px;
+  border-radius: 7px;
+  border: 2px solid #a7754d;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 0 auto;
+  width: 10%;
+}
+
+.addbook {
+  padding: 10px;
+  background-color: #dcccbb;
+  color: #a7754d;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.addbook:hover {
+  background-color: #eab464;
 }
 
 .card {
-  /* width: 100px; */
-  height: 200px;
+  height: 250px;
   border-radius: 7px;
   background-color: #fff;
-  padding: 20px;
-  border: 2px solid red;
-  background-color: #eab464;
+  padding: 10px;
+  border: 2px solid #a7754d;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-/* .centered-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  margin: 0 auto;
-  width: 50%;
-
-  display: flex;
-  flex-direction: column;
-} */
-
-.form--container {
-  border: 2px solid white;
+#read,
+#remove {
+  padding: 10px;
+  background-color: #dcccbb;
+  color: #a7754d;
+  border-radius: 8px;
+  border: none;
 }
 
-/* .overlay {
+#read:hover,
+#remove:hover {
+  background-color: #eab464;
+}
+
+/* Styling for form created in JS on button click */
+.form--container {
+  height: 400px;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  background-color: #eab464;
   z-index: 9998;
-} */
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-form {
+  border: 2px solid #a7754d;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.formtitle {
+  text-align: center;
+  color: #a7754d;
+  margin: 0 0 -2px 0;
+  font-weight: 400;
+}
+
+.input {
+  width: 100%;
+  padding: 18px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #dcccbb;
+  color: #a7754d;
+  border-radius: 8px;
+  border: none;
+}
+
+.label {
+  flex: 3;
+  justify-content: space-between;
+  padding: 3px;
+  font-size: 18px;
+}
+
+#checkbox {
+  accent-color: #eab464;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.checkBoxDiv {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #a7754d;
+}
+
+.submitBtn {
+  padding: 1em;
+  background-color: #dcccbb;
+  color: #a7754d;
+  border-radius: 8px;
+  border: none;
+}
+
+.submitBtn:hover {
+  background-color: #eab464;
+}

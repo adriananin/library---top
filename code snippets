@@ -1,0 +1,24 @@
+/* .bookinfo--container {
+  display: none;
+  justify-content: center;
+}
+
+.bookinfo {
+  border: 2px solid #646e78;
+  margin-top: 25px;
+  align-items: center;
+  gap: 50px;
+  min-height: 40px;
+  padding: 10px 10px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+ <div class="bookinfo--container">
+<div class="bookinfo">
+  <div class="read">Books Read:</div>
+  <div class="unread">Books Unread:</div>
+  <div class="total">Total Books:</div>
+</div>
+</div>  */
