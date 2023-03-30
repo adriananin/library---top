@@ -1,5 +1,6 @@
 const bookContainer = document.querySelector(".card--container");
 const addFormBtn = document.querySelector(".addbook");
+const submit = document.querySelector(".submitBtn");
 addFormBtn.addEventListener("click", toggleContainerDiv);
 addFormBtn.addEventListener("click", createForm);
 
@@ -15,6 +16,8 @@ Book.prototype.info = function () {
 };
 
 let myLibrary = [];
+
+displayBook();
 
 function toggleContainerDiv() {
   const div = document.querySelector(".form--container");
@@ -116,6 +119,7 @@ function displayBook() {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("card");
     const titleElement = document.createElement("p");
+    titleElement.classList.add("cardtitle");
     titleElement.textContent = book.title;
 
     const authorElement = document.createElement("p");
@@ -132,6 +136,20 @@ function displayBook() {
     toggleReadBtn.textContent = book.read ? "Mark as Unread" : "Mark as Read";
     toggleReadBtn.addEventListener("click", function () {
       book.read = !book.read;
+      readElement.textContent = book.read ? "Read" : "Not read yet";
+      toggleReadBtn.textContent = book.read ? "Mark as Unread" : "Mark as Read";
+    });
+
+    const removeBtn = document.createElement("button");
+    removeBtn.id = "remove";
+    removeBtn.textContent = "Delete";
+    removeBtn.addEventListener("click", function () {
+      const bookIndex = myLibrary.indexOf(book);
+      if (bookIndex > -1) {
+        myLibrary.splice(bookIndex, 1);
+      }
+      bookContainer.innerHTML = "";
+      displayBook();
     });
 
     bookDiv.appendChild(titleElement);
@@ -139,6 +157,7 @@ function displayBook() {
     bookDiv.appendChild(pagesElement);
     bookDiv.appendChild(readElement);
     bookDiv.appendChild(toggleReadBtn);
+    bookDiv.appendChild(removeBtn);
     bookContainer.appendChild(bookDiv);
   }
 }

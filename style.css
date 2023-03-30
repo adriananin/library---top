@@ -32,7 +32,7 @@ svg {
 .card--container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   width: 60%;
   gap: 20px;
   color: #a7754d;
@@ -45,6 +45,7 @@ svg {
   background-color: #fff;
   display: flex;
   justify-content: center;
+  padding: 10px 30px;
   align-items: center;
   margin: 50px auto 0 auto;
   width: 10%;
@@ -69,13 +70,15 @@ svg {
   height: 250px;
   border-radius: 7px;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 10px 70px 10px;
   border: 2px solid #a7754d;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  gap: 7px;
 }
 
 #read,
